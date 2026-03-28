@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && npx gh-pages -d out"
+    "deploy": "next build && npx -y touch-cli out/.nojekyll && npx gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

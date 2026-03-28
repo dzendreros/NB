@@ -39,7 +39,7 @@ export const EVENT_TYPES = [
   {
     title: 'Cumpleaños',
     description: 'Celebraciones únicas con la mejor tecnología gaming. Desde niños hasta adultos.',
-    image: '/images/arcade.jpg',
+    image: '//NB/images//arcade.jpg',
   },
   {
     title: 'Eventos Corporativos',

@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
 
 const galleryImages = [
   {
-    src: '/images/simulador vr.jpg',
+    src: '//NB/images//simulador vr.jpg',
     alt: 'Simulador de Realidad Virtual',
     label: 'VR Experience',
   },
