@@ -2,10 +2,10 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // Opcional: Descomenta y ajusta esta línea si el proyecto no alojará en la raíz del dominio
-  // basePath: '/nb-gaming',
+  basePath: '/NB',          // 👈 MUY IMPORTANTE
+  assetPrefix: '/NB/',      // 👈 también importante
   images: {
-    unoptimized: true, // Necesario para páginas estáticas de GitHub Pages
+    unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
 }
