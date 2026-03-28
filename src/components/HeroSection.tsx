@@ -146,7 +146,7 @@ export default function HeroSection() {
       {/* Background Image with scale */}
       <div ref={imageRef} className="absolute inset-0 w-full h-full scale-110">
         <Image
-          src="//NB/images//banner_1 zona de juegos.jpg"
+          src="/NB/images/banner_1 zona de juegos.jpg"
           alt="NB Gaming Experience - Zona Gamer para Eventos"
           fill
           priority

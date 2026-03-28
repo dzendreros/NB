@@ -65,7 +65,7 @@ export default function CTASection() {
       <div className="absolute inset-0">
         <div ref={bgImageRef} className="absolute inset-[-20%] w-[140%] h-[140%]">
           <Image
-            src="//NB/images//arcade.jpg"
+            src="/NB/images/arcade.jpg"
             alt="Arcade gaming NB"
             fill
             className="object-cover opacity-30"

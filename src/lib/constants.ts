@@ -39,22 +39,22 @@ export const EVENT_TYPES = [
   {
     title: 'Cumpleaños',
     description: 'Celebraciones únicas con la mejor tecnología gaming. Desde niños hasta adultos.',
-    image: '//NB/images//arcade.jpg',
+    image: '/NB/images/arcade.jpg',
   },
   {
     title: 'Eventos Corporativos',
     description: 'Team building, lanzamientos de producto y convenciones con experiencia interactiva.',
-    image: '/images/simulador vr.jpg',
+    image: '/NB/images/simulador vr.jpg',
   },
   {
     title: 'Escuelas y Ferias',
     description: 'Atracciones tech para ferias escolares, kermesses y eventos educativos.',
-    image: '/images/futbolito.jpg',
+    image: '/NB/images/futbolito.jpg',
   },
   {
     title: 'Activaciones de Marca',
     description: 'Experiencias inmersivas que conectan tu marca con nuevas audiencias.',
-    image: '/images/simulador carro.jpg',
+    image: '/NB/images/simulador carro.jpg',
   },
 ]
 

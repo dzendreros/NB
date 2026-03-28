@@ -12,22 +12,22 @@ if (typeof window !== 'undefined') {
 
 const galleryImages = [
   {
-    src: '//NB/images//simulador vr.jpg',
+    src: '/NB/images/simulador vr.jpg',
     alt: 'Simulador de Realidad Virtual',
     label: 'VR Experience',
   },
   {
-    src: '/images/arcade.jpg',
+    src: '/NB/images/arcade.jpg',
     alt: 'Máquinas Arcade',
     label: 'Arcade Zone',
   },
   {
-    src: '/images/simulador carro.jpg',
+    src: '/NB/images/simulador carro.jpg',
     alt: 'Simulador de Carreras',
     label: 'Racing Sim',
   },
   {
-    src: '/images/futbolito.jpg',
+    src: '/NB/images/futbolito.jpg',
     alt: 'Futbolito',
     label: 'Futbolito Pro',
   },

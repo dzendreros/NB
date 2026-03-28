@@ -159,7 +159,7 @@ export default function CredibilitySection() {
           <div className="relative rounded-2xl overflow-hidden h-[350px] sm:h-[450px] order-2 lg:order-1">
             <div ref={imageRef} className="absolute inset-[-15%] w-[130%] h-[130%]">
               <Image
-                src="//NB/images//simulador vr.jpg"
+                src="/NB/images/simulador vr.jpg"
                 alt="Experiencia VR en eventos NB Gaming"
                 fill
                 className="object-cover"
