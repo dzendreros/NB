@@ -11,9 +11,11 @@ const nextConfig: NextConfig = {
   },
   // Permitir acceso desde la red local para ver la app en otros dispositivos
   allowedDevOrigins: ['10.5.0.2', '127.0.0.1', 'localhost'],
-  
-  // En desarrollo, redirigir automáticamente de / a /NB para evitar el error 404
-  async redirects() {
+}
+
+// En desarrollo, redirigir automáticamente de / a /NB para evitar el error 404
+if (!isProd) {
+  nextConfig.redirects = async () => {
     return [
       {
         source: '/',
@@ -22,7 +24,7 @@ const nextConfig: NextConfig = {
         permanent: false,
       },
     ]
-  },
+  }
 }
 
 export default nextConfig
