@@ -74,17 +74,15 @@ export default function ExperienceSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="section-label mx-auto w-fit">
-            La Experiencia
+          <div className="section-label mx-auto w-fit glow-green">
+            El Problema
           </div>
-          <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-white">No son solo juegos...</span>
-            <br />
-            <span className="text-gradient">¡es una experiencia gamer!</span>
+          <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black mb-6 leading-tight">
+            <span className="text-white">No dejes que tu evento sea </span>
+            <span className="text-gradient-animated glow-text">uno más del montón</span>
           </h2>
-          <p className="text-nb-text-muted text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Zona Gamer NB es un montaje profesional que reúne los mejores juegos para tu evento.
-            Desde simuladores de realidad virtual hasta arcades clásicos.
+          <p className="text-nb-text/90 text-base sm:text-xl font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+            Evita el aburrimiento y sorprende a todos. Nuestra Zona Gamer garantiza horas de adrenalina con <span className="text-nb-green-light">cero estrés de organización</span>.
           </p>
         </div>
 

@@ -75,15 +75,15 @@ export default function SocialProofSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="section-label mx-auto w-fit">
-            Prueba Social
+          <div className="section-label mx-auto w-fit glow-green">
+            Resultados Reales
           </div>
-          <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-gradient">Más de 500</span>
-            <span className="text-white"> eventos realizados</span>
+          <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black mb-6 leading-tight">
+            <span className="text-gradient-animated glow-text">+50,000 personas</span>
+            <span className="text-white"> ya lo vivieron</span>
           </h2>
-          <p className="text-nb-text-muted text-base sm:text-lg">
-            Empresas que ya confiaron en nosotros
+          <p className="text-nb-text/80 text-base sm:text-xl font-medium drop-shadow-md">
+            Grandes marcas ya confían en la adrenalina de NB Gaming
           </p>
         </div>
 

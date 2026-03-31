@@ -75,14 +75,12 @@ export default function EventTypesSection() {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="section-label mx-auto w-fit">
-            Tipos de Evento
+          <div className="section-label mx-auto w-fit glow-green">
+            Adaptabilidad
           </div>
-          <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-white">Perfecto para </span>
-            <span className="text-gradient">cualquier tipo</span>
-            <br />
-            <span className="text-white">de evento</span>
+          <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black mb-6 leading-tight">
+            <span className="text-white">Lo montamos donde sea, </span>
+            <span className="text-gradient-animated glow-text drop-shadow-lg">para lo que sea</span>
           </h2>
         </div>
 

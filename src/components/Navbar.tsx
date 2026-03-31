@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import Image from 'next/image'
 import { NAV_ITEMS, WHATSAPP_LINK } from '@/lib/constants'
 
 if (typeof window !== 'undefined') {
@@ -44,22 +45,16 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 cursor-pointer"
+              whileHover={{ scale: 1.05, filter: 'drop-shadow(0 0 10px rgba(4,191,51,0.5))' }}
+              className="relative w-32 sm:w-40 h-12 cursor-pointer transition-all duration-300"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-nb-green-primary to-nb-green-dark flex items-center justify-center">
-                <span className="text-white font-[var(--font-heading)] font-bold text-sm sm:text-lg">
-                  NB
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[var(--font-heading)] font-bold text-xs sm:text-sm text-white tracking-wider">
-                  GAMING
-                </span>
-                <span className="text-[8px] sm:text-[10px] text-nb-text-muted tracking-[0.2em] uppercase">
-                  Experience
-                </span>
-              </div>
+              <Image
+                src="/NB/images/logo.png"
+                alt="NB Gaming Experience Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </motion.div>
 
             {/* Desktop Nav */}
