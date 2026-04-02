@@ -532,3 +532,105 @@ body {
   margin: 0 auto;
   max-width: 80%;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   URGENCY BANNER
+   ═══════════════════════════════════════════════════════════ */
+.urgency-banner {
+  background: linear-gradient(90deg, #b91c1c 0%, #DC2626 50%, #b91c1c 100%);
+  background-size: 200% 100%;
+  animation: urgency-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes urgency-shimmer {
+  0%, 100% { background-position: 0% 0; }
+  50% { background-position: 100% 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FEATURE STRIP
+   ═══════════════════════════════════════════════════════════ */
+.feature-strip-bg {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.feature-strip-item {
+  background: rgba(17, 17, 17, 0.5);
+  border: 1px solid rgba(4, 191, 51, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-strip-item:hover {
+  background: rgba(4, 191, 51, 0.06);
+  border-color: rgba(4, 191, 51, 0.35);
+  box-shadow: 0 0 24px rgba(4, 191, 51, 0.15), inset 0 0 10px rgba(4, 191, 51, 0.05);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   STATEMENT SCANLINES
+   ═══════════════════════════════════════════════════════════ */
+.statement-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.15) 3px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRICING CARDS
+   ═══════════════════════════════════════════════════════════ */
+.pricing-card {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(4, 191, 51, 0.12);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pricing-card:hover {
+  border-color: rgba(4, 191, 51, 0.5);
+  box-shadow: 0 0 50px rgba(4, 191, 51, 0.2), 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card--highlight {
+  background: rgba(4, 191, 51, 0.04);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(4, 191, 51, 0.4);
+  box-shadow: 0 0 40px rgba(4, 191, 51, 0.15), inset 0 0 30px rgba(4, 191, 51, 0.04);
+}
+
+.pricing-card--highlight:hover {
+  border-color: rgba(4, 191, 51, 0.8);
+  box-shadow: 0 0 60px rgba(4, 191, 51, 0.3), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.pricing-highlight-ring {
+  box-shadow: inset 0 0 0 1px rgba(4, 191, 51, 0.3), 0 0 60px rgba(4, 191, 51, 0.08);
+  border-radius: 1rem;
+  animation: highlight-pulse 3s ease-in-out infinite;
+}
+
+@keyframes highlight-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(4, 191, 51, 0.3), 0 0 40px rgba(4, 191, 51, 0.08); }
+  50% { box-shadow: inset 0 0 0 1px rgba(4, 191, 51, 0.6), 0 0 80px rgba(4, 191, 51, 0.18); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER NEON LINE
+   ═══════════════════════════════════════════════════════════ */
+.footer-neon-line {
+  box-shadow: 0 0 12px rgba(4, 191, 51, 0.6), 0 0 30px rgba(4, 191, 51, 0.3);
+  animation: neon-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(4, 191, 51, 0.6), 0 0 30px rgba(4, 191, 51, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(4, 191, 51, 0.9), 0 0 50px rgba(4, 191, 51, 0.5); }
+}
+

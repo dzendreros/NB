@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Link from 'next/link'
 import Image from 'next/image'
 import { NAV_ITEMS, WHATSAPP_LINK } from '@/lib/constants'
 
@@ -35,27 +34,29 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? 'bg-nb-dark/90 backdrop-blur-xl border-b border-nb-border shadow-lg shadow-black/20'
             : 'bg-transparent'
         }`}
+        style={{ top: '40px' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <motion.div
+            {/* Logo — logo2.png para área gaming */}
+            <motion.a
+              href="#hero"
               whileHover={{ scale: 1.05, filter: 'drop-shadow(0 0 10px rgba(4,191,51,0.5))' }}
               className="relative w-32 sm:w-40 h-12 cursor-pointer transition-all duration-300"
             >
               <Image
-                src="/NB/images/logo.png"
+                src="/NB/images/logo2.png"
                 alt="NB Gaming Experience Logo"
                 fill
                 className="object-contain"
                 priority
               />
-            </motion.div>
+            </motion.a>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">

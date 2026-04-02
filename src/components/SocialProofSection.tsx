@@ -1,29 +1,72 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { useRef, useEffect, useState, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { TESTIMONIALS, CLIENT_LOGOS } from '@/lib/constants'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-const clientNames = [
-  'TESLA CORP',
-  'NEXUS TECH',
-  'GLOBAL INC',
-  'APEX GROUP',
-  'SYNTH CO',
-  'VOLTA LABS',
-  'PRIME EVENTS',
-  'ELITE MEDIA',
-]
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${rating} estrellas`}>
+      {[1, 2, 3, 4, 5].map((star) => (
+        <svg
+          key={star}
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill={star <= Math.floor(rating) ? '#04BF33' : star - 0.5 <= rating ? 'url(#half)' : '#333'}
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="half">
+              <stop offset="50%" stopColor="#04BF33" />
+              <stop offset="50%" stopColor="#333" />
+            </linearGradient>
+          </defs>
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+      ))}
+    </div>
+  )
+}
 
 export default function SocialProofSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
   const marqueeRef = useRef<HTMLDivElement>(null)
+
+  const [current, setCurrent] = useState(0)
+  const [direction, setDirection] = useState<1 | -1>(1)
+
+  const total = TESTIMONIALS.length
+
+  const go = useCallback((dir: 1 | -1) => {
+    setDirection(dir)
+    setCurrent((prev) => (prev + dir + total) % total)
+  }, [total])
+
+  // Auto-advance every 6s
+  useEffect(() => {
+    const id = setInterval(() => go(1), 6000)
+    return () => clearInterval(id)
+  }, [go])
+
+  // Touch/swipe support
+  const touchStartX = useRef<number | null>(null)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const delta = e.changedTouches[0].clientX - touchStartX.current
+    if (Math.abs(delta) > 50) go(delta < 0 ? 1 : -1)
+    touchStartX.current = null
+  }
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -45,7 +88,6 @@ export default function SocialProofSection() {
         }
       )
 
-      // Marquee animation
       if (marqueeRef.current) {
         const marqueeInner = marqueeRef.current.querySelector('.marquee-inner')
         if (marqueeInner) {
@@ -61,6 +103,19 @@ export default function SocialProofSection() {
 
     return () => ctx.revert()
   }, [])
+
+  const variants = {
+    enter: (dir: number) => ({ x: dir > 0 ? 300 : -300, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir: number) => ({ x: dir > 0 ? -300 : 300, opacity: 0 }),
+  }
+
+  // Visible window: show 3 testimonials (centered) on desktop, 1 on mobile
+  const visibleIndexes = [
+    (current - 1 + total) % total,
+    current,
+    (current + 1) % total,
+  ]
 
   return (
     <section
@@ -88,14 +143,12 @@ export default function SocialProofSection() {
         </div>
 
         {/* Logo Marquee */}
-        <div ref={marqueeRef} className="relative overflow-hidden py-8">
-          {/* Fade edges */}
+        <div ref={marqueeRef} className="relative overflow-hidden py-8 mb-20">
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-nb-dark to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-nb-dark to-transparent z-10" />
 
           <div className="marquee-inner flex gap-8 w-max">
-            {/* Double the items for seamless loop */}
-            {[...clientNames, ...clientNames].map((name, idx) => (
+            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((name, idx) => (
               <div
                 key={`${name}-${idx}`}
                 className="flex-shrink-0 glass-card rounded-xl px-10 py-6 flex items-center justify-center min-w-[200px] group hover:border-nb-green-primary/30 transition-all duration-500"
@@ -115,71 +168,126 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mt-16">
-          {[
-            {
-              quote: 'El montaje fue increíble. Nuestros invitados no paraban de jugar. ¡Repetiremos seguro!',
-              author: 'María G.',
-              role: 'Evento Corporativo',
-              rating: 5,
-            },
-            {
-              quote: 'La zona gamer fue el hit de la fiesta de mi hijo. Todos los niños la pasaron genial.',
-              author: 'Carlos R.',
-              role: 'Cumpleaños',
-              rating: 5,
-            },
-            {
-              quote: 'Profesionales de primera. La activación tuvo una respuesta brutal del público.',
-              author: 'Ana M.',
-              role: 'Activación de Marca',
-              rating: 5,
-            },
-          ].map((testimonial, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -6 }}
-              className="glass-card rounded-xl p-6 sm:p-8 group hover:border-nb-green-primary/30 transition-all duration-500"
-            >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <svg
-                    key={i}
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="#04BF33"
+        {/* ─── TESTIMONIAL CAROUSEL ─── */}
+        <div className="relative">
+          {/* Desktop: 3-up view */}
+          <div
+            className="hidden md:grid grid-cols-3 gap-5"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            {visibleIndexes.map((tIdx, pos) => {
+              const t = TESTIMONIALS[tIdx]
+              const isCenter = pos === 1
+              return (
+                <motion.div
+                  key={`${tIdx}-${pos}`}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  animate={{ opacity: isCenter ? 1 : 0.5, y: 0, scale: isCenter ? 1 : 0.95 }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className={`glass-card rounded-xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-500 ${isCenter ? 'border-nb-green-primary/40 shadow-[0_0_40px_rgba(4,191,51,0.1)]' : ''}`}
+                >
+                  <StarRating rating={t.rating} />
+                  <p className="text-nb-text/90 text-sm sm:text-base leading-relaxed italic flex-1">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3 pt-2 border-t border-nb-border">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white flex-shrink-0"
+                      style={{ backgroundColor: t.avatarColor }}
+                    >
+                      {t.author.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-sm">{t.author}</p>
+                      <p className="text-nb-text-muted text-xs">{t.role}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+
+          {/* Mobile: single card swipe */}
+          <div
+            className="md:hidden relative overflow-hidden rounded-xl"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            style={{ minHeight: '280px' }}
+          >
+            <AnimatePresence custom={direction} mode="wait">
+              <motion.div
+                key={current}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="glass-card rounded-xl p-6 flex flex-col gap-4 border-nb-green-primary/30"
+              >
+                <StarRating rating={TESTIMONIALS[current].rating} />
+                <p className="text-nb-text/90 text-sm leading-relaxed italic flex-1">
+                  &ldquo;{TESTIMONIALS[current].quote}&rdquo;
+                </p>
+                <div className="flex items-center gap-3 pt-2 border-t border-nb-border">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white flex-shrink-0"
+                    style={{ backgroundColor: TESTIMONIALS[current].avatarColor }}
                   >
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </div>
-
-              {/* Quote */}
-              <p className="text-nb-text/90 text-sm sm:text-base leading-relaxed mb-6 italic">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-nb-green-primary to-nb-green-dark flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">
-                    {testimonial.author.charAt(0)}
-                  </span>
+                    {TESTIMONIALS[current].author.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm">{TESTIMONIALS[current].author}</p>
+                    <p className="text-nb-text-muted text-xs">{TESTIMONIALS[current].role}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">{testimonial.author}</p>
-                  <p className="text-nb-text-muted text-xs">{testimonial.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation arrows */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => go(-1)}
+              className="w-10 h-10 rounded-full glass-card border-nb-green-primary/30 flex items-center justify-center text-nb-green-primary hover:border-nb-green-primary hover:bg-nb-green-primary/10 transition-all duration-300"
+              aria-label="Testimonio anterior"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </motion.button>
+
+            {/* Dots */}
+            <div className="flex gap-2">
+              {TESTIMONIALS.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i) }}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === current
+                      ? 'w-6 h-2 bg-nb-green-primary'
+                      : 'w-2 h-2 bg-nb-text-muted/40 hover:bg-nb-text-muted/70'
+                  }`}
+                  aria-label={`Ir al testimonio ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => go(1)}
+              className="w-10 h-10 rounded-full glass-card border-nb-green-primary/30 flex items-center justify-center text-nb-green-primary hover:border-nb-green-primary hover:bg-nb-green-primary/10 transition-all duration-300"
+              aria-label="Testimonio siguiente"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.button>
+          </div>
         </div>
       </div>
     </section>
