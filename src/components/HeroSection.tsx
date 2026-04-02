@@ -238,7 +238,7 @@ export default function HeroSection() {
           </p>
 
           {/* Main Title — "Haz de tu evento algo completamente épico con Zona Gamer NB" */}
-          <h1
+          {/*<h1
             ref={titleRef}
             className="font-[var(--font-heading)] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-black leading-[1.05] mb-6 hero-title-glitch"
           >
@@ -250,7 +250,7 @@ export default function HeroSection() {
               con Zona Gamer NB
               <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 bg-nb-green-primary rounded-full ml-3 align-middle glow-green-intense" style={{ animation: 'pulse-glow 2s ease-in-out infinite' }} />
             </span>
-          </h1>
+          </h1>*/}
 
           {/* Tagline — just above CTA */}
           <p
