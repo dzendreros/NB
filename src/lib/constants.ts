@@ -118,6 +118,7 @@ export const PACKAGES = [
     name: 'EXPERIENCIA BÁSICA',
     badge: null,
     highlight: false,
+    image: '/NB/images/arcade.jpg',
     features: [
       '3 Juegos a elegir',
       'Transporte incluido',
@@ -129,8 +130,9 @@ export const PACKAGES = [
   {
     id: 'intermedia',
     name: 'EXPERIENCIA INTERMEDIA',
-    badge: '⭐ MÁS POPULAR',
-    highlight: true,
+    badge: null,
+    highlight: false,
+    image: '/NB/images/futbolito2.jpg',
     features: [
       '4 Juegos a elegir',
       'Transporte incluido',
@@ -142,8 +144,9 @@ export const PACKAGES = [
   {
     id: 'pro',
     name: 'ZONA GAMER PRO',
-    badge: '🏆 MÁS COMPLETO',
-    highlight: false,
+    badge: '🏆 MÁS POPULAR',
+    highlight: true,
+    image: '/NB/images/IMG_20260213_202412.jpg',
     features: [
       'Simulador Racing (Pantalla 50", Volante, Pedales, Asiento)',
       'Simulador VR o Multijuegos (Pantalla 50")',

@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 import { PACKAGES } from '@/lib/constants'
 
 if (typeof window !== 'undefined') {
@@ -127,6 +128,19 @@ export default function PricingSection() {
                     : 'bg-nb-green-primary/20 text-nb-green-primary border border-nb-green-primary/40'
                 }`}>
                   {pkg.badge}
+                </div>
+              )}
+
+              {/* Image banner inside the card */}
+              {pkg.image && (
+                <div className="relative w-full h-40 sm:h-48 border-b border-nb-green-primary/20">
+                  <Image
+                    src={pkg.image}
+                    alt={pkg.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-nb-dark to-transparent opacity-80" />
                 </div>
               )}
 
