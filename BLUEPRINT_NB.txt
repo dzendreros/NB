@@ -1,0 +1,125 @@
+================================================================================
+          BLUEPRINT: NB GAMING EXPERIENCE — MANIFIESTO DEL PROYECTO
+================================================================================
+
+Este documento es la fuente oficial de verdad para el proyecto NB Gaming 
+Experience. Su objetivo es que cualquier Programador, Diseñador o Marketer 
+entienda la visión, estructura y objetivos del proyecto en minutos.
+
+--------------------------------------------------------------------------------
+1. VISIÓN DEL PROYECTO Y PRODUCTO
+--------------------------------------------------------------------------------
+
+¿QUÉ ES NB GAMING EXPERIENCE?
+Es una plataforma de "Gaming Experience as a Service". La empresa se dedica a 
+la renta de simuladores de carreras, estaciones de Realidad Virtual (VR), 
+arcades clásicos y zonas gamer para eventos corporativos, fiestas privadas y 
+activaciones de marca de alto impacto.
+
+PROPUESTA DE VALOR:
+Transformar eventos convencionales en experiencias tecnológicas memorables. 
+El enfoque no es solo "jugar", sino el "Status" y la "Inmersión" que la 
+tecnología de punta ofrece a los asistentes.
+
+PÚBLICO OBJETIVO:
+- Organizadores de eventos corporativos (Team building).
+- Agencias de marketing (Activaciones de marca).
+- Particulares que buscan cumpleaños o eventos de lujo.
+
+--------------------------------------------------------------------------------
+2. ESTRATEGIA DE MARKETING Y CONVERSIÓN (CRO)
+--------------------------------------------------------------------------------
+
+EL FUNNEL DE VENTA:
+La landing page está diseñada como una máquina de conversión directa. 
+El flujo psicológico es:
+1. IMPACTO (Hero Section): "Efecto WOW" inmediato con visuales de alta calidad.
+2. CURIOSIDAD (Bento Grid): Mostrar el arsenal tecnológico de forma dinámica.
+3. CONFIANZA (Social Proof): Logos de clientes premium y estadísticas reales.
+4. ACCIÓN (CTA): Botón persistente de WhatsApp como único canal de cierre.
+
+PSICOLOGÍA DEL COPYWRITING:
+- Se evita el lenguaje técnico aburrido.
+- Se usan palabras de poder: "Legendario", "Épico", "Inolvidable", "Élite".
+- Enfoque "Cero Estrés": Se le dice al cliente que NB se encarga de todo 
+  (montaje/staff), eliminando la fricción de la compra.
+
+--------------------------------------------------------------------------------
+3. ARQUITECTURA TÉCNICA (DEVELOPER PATH)
+--------------------------------------------------------------------------------
+
+STACK TECNOLÓGICO:
+- Framework: Next.js 16.2.1 (Utilizando App Router).
+- Biblioteca UI: React 19 (Hooks modernos, Concurrent features).
+- Estilos: Tailwind CSS v4 (Nativo, optimizado).
+- Animaciones: 
+  * GSAP 3: Para animaciones de scroll (Parallax, Reveal).
+  * Framer Motion: Para micro-interacciones (Hovers, Rebounds).
+- Lenguaje: TypeScript 5.
+
+FILOSOFÍA DE DESARROLLO:
+- "Constants-First": Casi todo el contenido textual y rutas de imágenes están 
+  centralizados en 'src/lib/constants.ts'. Esto permite que un Marketer 
+  o el cliente mismo pueda cambiar textos sin tocar la lógica de los componentes.
+- Component-Driven: Cada sección de la landing (`Hero`, `Gallery`, `CTA`) es un 
+  componente modular y reactivo.
+
+DIRECTORIOS CLAVE:
+- /src/app/globals.css: Define el sistema de diseño completo (Themes, Keyframes).
+- /src/components: Contiene el "Arsenal" de componentes UI.
+- /src/lib/constants.ts: Diccionario central de contenido.
+- /public/images: Contenedor de activos visuales optimizados.
+
+DESPLIEGUE (DEPLOYMENT):
+El proyecto se compila como "Static HTML Export". El comando `npm run build` 
+genera una carpeta `out/` lista para ser servida en GitHub Pages u otros 
+hosting estáticos. 
+*Importante*: El `basePath` está configurado como '/NB' en `next.config.ts`.
+
+--------------------------------------------------------------------------------
+4. SISTEMA DE DISEÑO Y UX (DESIGNER PATH)
+--------------------------------------------------------------------------------
+
+ADN VISUAL: "GAMER PREMIUM"
+El diseño se aleja de lo "infantil" y busca una estética tecnológica, oscura 
+y elegante, similar a marcas de hardware como Razer o Alienware.
+
+PALETA DE COLORES (Design Tokens):
+- NB Green (Primary): #04BF33 (El color de la adrenalina y energía).
+- NB Dark (Background): #0D0D0D (Negro profundo para resaltar el neón).
+- NB Border: #222222 (Bordes sutiles para tarjetas).
+- NB Text: #F0F0F0 (Blanco roto para evitar fatiga visual).
+
+CARACTERÍSTICAS DE INTERFAZ:
+- Neutros y Neones: Uso de sombras `glow-green` para simular luces RGB.
+- Glassmorphism: Tarjetas con `backdrop-filter: blur(24px)` para profundidad.
+- Bento Grid: Un layout de rejilla irregular inspirado en Apple y el gaming 
+  moderno, que permite mostrar múltiples servicios de forma cohesionada.
+
+TIPOGRAFÍA:
+- Títulos: 'Orbitron' (Futurista, Geométrica).
+- Cuerpo: 'Inter' (Altamente legible, moderna).
+
+--------------------------------------------------------------------------------
+5. GUÍA DE MANTENIMIENTO Y ESCALABILIDAD
+--------------------------------------------------------------------------------
+
+CÓMO ACTUALIZAR EL CONTENIDO:
+1. Abre `src/lib/constants.ts`.
+2. Modifica el array respectivo (`EVENT_TYPES`, `TRUST_POINTS`, etc.).
+3. El frontend se actualizará automáticamente respetando las animaciones.
+
+CÓMO AÑADIR NUEVAS FOTOS:
+1. Sube la imagen a `public/images/`.
+2. Se recomienda formato .webp o .jpg comprimido.
+3. Actualiza la ruta en `constants.ts`.
+
+MANTENER EL RENDIMIENTO:
+- Evitar imágenes de más de 1MB (optimizar antes de subir).
+- Mantener las animaciones de GSAP dentro de `useEffect` o `useLayoutEffect` 
+  para evitar fugas de memoria.
+
+--------------------------------------------------------------------------------
+DOCUMENTO ACTUALIZADO: 2026-04-01
+AUTOR: ANTIGRAVITY AI - CODING ASSISTANT
+--------------------------------------------------------------------------------
