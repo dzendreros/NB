@@ -220,11 +220,12 @@ export default function HeroSection() {
           {/* Badge — "ZONA GAMER PREMIUM" */}
           <div
             ref={badgeRef}
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full mb-6 border border-nb-green-primary/30 bg-nb-green-primary/5 backdrop-blur-md"
+            className="inline-flex w-fit max-w-full items-center gap-1.5 px-2.5 py-1 rounded-full mb-3 border border-nb-green-primary/30 bg-nb-green-primary/5 backdrop-blur-md mx-auto sm:mx-0"
             style={{ animation: 'glow-border 3s ease-in-out infinite' }}
           >
-            <div className="w-2 h-2 rounded-full bg-nb-green-primary animate-pulse" />
-            <span className="font-[var(--font-heading)] text-[11px] sm:text-xs tracking-[0.2em] uppercase text-nb-green-primary font-semibold">
+            <div className="w-1.5 h-1.5 rounded-full bg-nb-green-primary animate-pulse shrink-0" />
+
+            <span className="font-[var(--font-heading)] text-[9px] sm:text-[11px] tracking-[0.1em] uppercase text-nb-green-primary font-semibold whitespace-nowrap">
               {HERO_CONTENT.badge}
             </span>
           </div>
