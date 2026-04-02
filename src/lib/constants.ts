@@ -17,7 +17,7 @@ export const URGENCY_BANNER = {
 
 // ─── HERO SECTION ─────────────────────────────────────────────────────────────
 export const HERO_CONTENT = {
-  badge: 'ZONA GAMER PREMIUM',
+  badge: 'GAMING EXPERIENCE',
   subtitle: 'Para Eventos',
   tagline: 'La experiencia que todos van a recordar',
   primaryCta: 'COTIZAR AHORA EN WHATSAPP',

@@ -230,27 +230,27 @@ export default function HeroSection() {
           </div>
 
           {/* "Para Eventos" — large subtitle above main title */}
-          <p
+          {/*  <p
             ref={subtitleRef}
             className="font-[var(--font-heading)] text-xl sm:text-2xl md:text-3xl font-bold text-nb-green-light tracking-wider uppercase mb-3"
           >
             {HERO_CONTENT.subtitle}
-          </p>
+          </p> */}
 
           {/* Main Title — "Haz de tu evento algo completamente épico con Zona Gamer NB" */}
-          {/*<h1
+          <h1
             ref={titleRef}
             className="font-[var(--font-heading)] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-black leading-[1.05] mb-6 hero-title-glitch"
           >
-            <span className="text-white block">Haz de tu evento algo</span>
+            <span className="text-white block">ZONA GAMER PREMIUM</span>
             <span className="text-gradient-animated block mt-2 lg:mt-3" style={{ textShadow: '0 0 60px rgba(4,191,51,0.6)' }}>
-              completamente épico
+              PARA EVENTOS
             </span>
-            <span className="text-white block mt-2 lg:mt-3">
+            {/* <span className="text-white block mt-2 lg:mt-3">
               con Zona Gamer NB
               <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 bg-nb-green-primary rounded-full ml-3 align-middle glow-green-intense" style={{ animation: 'pulse-glow 2s ease-in-out infinite' }} />
-            </span>
-          </h1>*/}
+            </span> */}
+          </h1>
 
           {/* Tagline — just above CTA */}
           <p
