@@ -21,7 +21,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260213_203120.jpg',
     alt: 'Zona gamer en evento',
-    label: 'Evento Real',
+    label: 'Racing + Fifa',
     isReal: true,
     spanClass: 'col-span-1 row-span-1',
   },
@@ -35,7 +35,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260213_203702.jpg',
     alt: 'Evento gaming premium',
-    label: 'Evento Real',
+    label: 'VR + Racing + Futbolito',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-1',
   },
@@ -56,7 +56,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260130_145222.jpg',
     alt: 'Zona gamer exterior evento',
-    label: 'Evento Real',
+    label: 'VR Boxing',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-1',
   },
