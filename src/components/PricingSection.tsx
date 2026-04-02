@@ -120,17 +120,6 @@ export default function PricingSection() {
                 <div className="absolute inset-0 rounded-2xl pricing-highlight-ring pointer-events-none" />
               )}
 
-              {/* Badge */}
-              {pkg.badge && (
-                <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-[10px] font-[var(--font-heading)] font-bold tracking-wider uppercase ${
-                  pkg.highlight
-                    ? 'bg-nb-green-primary text-white'
-                    : 'bg-nb-green-primary/20 text-nb-green-primary border border-nb-green-primary/40'
-                }`}>
-                  {pkg.badge}
-                </div>
-              )}
-
               {/* Image banner inside the card */}
               {pkg.image && (
                 <div className="relative w-full h-40 sm:h-48 border-b border-nb-green-primary/20">
@@ -141,6 +130,17 @@ export default function PricingSection() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-nb-dark to-transparent opacity-80" />
+                </div>
+              )}
+
+              {/* Badge */}
+              {pkg.badge && (
+                <div className={`absolute top-4 right-4 z-20 px-4 py-1.5 rounded-full text-xs font-[var(--font-heading)] font-black tracking-wider uppercase shadow-xl ${
+                  pkg.highlight
+                    ? 'bg-gradient-to-r from-red-600 to-orange-500 text-white border border-orange-400/50 shadow-orange-500/30'
+                    : 'bg-nb-green-primary/20 text-nb-green-primary border border-nb-green-primary/40'
+                }`}>
+                  {pkg.badge}
                 </div>
               )}
 

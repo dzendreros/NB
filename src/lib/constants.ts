@@ -144,7 +144,7 @@ export const PACKAGES = [
   {
     id: 'pro',
     name: 'ZONA GAMER PRO',
-    badge: '🏆 MÁS POPULAR',
+    badge: '🔥 Más contratado',
     highlight: true,
     image: '/NB/images/IMG_20260213_202412.jpg',
     features: [
