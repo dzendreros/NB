@@ -127,7 +127,8 @@ export default function PricingSection() {
                     src={pkg.image}
                     alt={pkg.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                   //  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                   className="object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-nb-dark to-transparent opacity-80" />
                 </div>
