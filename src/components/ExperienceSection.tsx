@@ -75,7 +75,7 @@ export default function ExperienceSection() {
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="section-label mx-auto w-fit glow-green">
-            El Problema
+            Hazlo épico
           </div>
           <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black mb-6 leading-tight">
             <span className="text-white">No dejes que tu evento sea </span>

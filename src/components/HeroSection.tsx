@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
 
 const heroStats = [
   { value: '500+', label: 'Eventos' },
-  { value: '8+', label: 'Años' },
+  { value: '10+', label: 'Años' },
   { value: '98%', label: 'Satisfacción' },
 ]
 

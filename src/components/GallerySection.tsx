@@ -14,7 +14,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260213_202412.jpg',
     alt: 'Evento real NB Gaming',
-    label: 'Evento Real',
+    label: 'Fifa Zone',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-2',
   },
@@ -70,7 +70,7 @@ const galleryImages = [
   {
     src: '/NB/images/simulador de box.jpg',
     alt: 'Simulador de Box',
-    label: 'Punching Box',
+    label: 'Fight Zone VR',
     isReal: false,
     spanClass: 'col-span-1 row-span-1',
   },
@@ -146,8 +146,8 @@ export default function GallerySection() {
             El Arsenal
           </div>
           <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight">
-            <span className="text-white">Galería de </span>
-            <span className="text-gradient-animated glow-text">Eventos Reales</span>
+            <span className="text-white">Eventos Reales,</span>
+            <span className="text-gradient-animated glow-text"> Resultados Reales</span>
           </h2>
           <p className="text-nb-text/80 text-base sm:text-lg font-medium">
             Así lucen nuestras zonas gamer en acción. Calidad premium garantizada en cada evento.

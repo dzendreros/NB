@@ -106,7 +106,7 @@ export default function StatementSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center flex flex-col items-center gap-8">
         {/* Badge */}
         <div ref={badgeRef} className="section-label mx-auto w-fit bg-nb-green-primary/10 glow-green">
-          Nuestra Misión
+          Nuestra Razón de Ser
         </div>
 
         {/* Statement text — clip reveal */}

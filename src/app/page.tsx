@@ -1,16 +1,16 @@
-import UrgencyBanner from '@/components/UrgencyBanner'
-import Navbar from '@/components/Navbar'
-import HeroSection from '@/components/HeroSection'
-import FeatureStrip from '@/components/FeatureStrip'
-import StatementSection from '@/components/StatementSection'
-import ExperienceSection from '@/components/ExperienceSection'
-import PricingSection from '@/components/PricingSection'
-import GallerySection from '@/components/GallerySection'
-import EventTypesSection from '@/components/EventTypesSection'
-import CredibilitySection from '@/components/CredibilitySection'
-import SocialProofSection from '@/components/SocialProofSection'
-import CTASection from '@/components/CTASection'
-import Footer from '@/components/Footer'
+import UrgencyBanner from "@/components/UrgencyBanner";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import FeatureStrip from "@/components/FeatureStrip";
+import StatementSection from "@/components/StatementSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import PricingSection from "@/components/PricingSection";
+import GallerySection from "@/components/GallerySection";
+import EventTypesSection from "@/components/EventTypesSection";
+import CredibilitySection from "@/components/CredibilitySection";
+import SocialProofSection from "@/components/SocialProofSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -28,13 +28,8 @@ export default function Home() {
         {/* 2. Feature strip — 4 icons */}
         <FeatureStrip />
 
-        {/* 3. Statement impact section */}
+        {/* 3. Statement impact section -- Nuestra Misión */}
         <StatementSection />
-
-        <div className="section-divider" />
-
-        {/* 4. ExperienceSection — "El Problema" / event categories */}
-        <ExperienceSection />
 
         <div className="section-divider" />
 
@@ -45,6 +40,11 @@ export default function Home() {
 
         {/* 6. Gallery — "El Arsenal" with real event photos */}
         <GallerySection />
+
+        <div className="section-divider" />
+
+        {/* 4. ExperienceSection — "El Problema" / event categories -- El Problema */}
+        <ExperienceSection />
 
         <div className="section-divider" />
 
@@ -70,5 +70,5 @@ export default function Home() {
       {/* Footer — redesigned */}
       <Footer />
     </>
-  )
+  );
 }
