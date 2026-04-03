@@ -157,9 +157,9 @@ export default function PricingSection() {
                 </div>
 
                 {/* Features list */}
-                <ul className="space-y-3 flex-1 mb-8">
+                <ul className="space-y-3 flex-2 mb-8 pl-3">
                   {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
+                    <li key={i} className="flex items-start gap-1.5">
                       <CheckIcon />
                       <span className="text-sm text-nb-text/85 leading-snug">{feature}</span>
                     </li>

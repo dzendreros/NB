@@ -136,7 +136,7 @@ export default function CredibilitySection() {
         {/* Stats Row */}
         <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 sm:mb-20">
           {[
-            { value: 8, suffix: '+', label: 'Años de experiencia' },
+            { value: 10, suffix: '+', label: 'Años de experiencia' },
             { value: 500, suffix: '+', label: 'Eventos realizados' },
             { value: 50, suffix: 'K+', label: 'Personas entretenidas' },
             { value: 98, suffix: '%', label: 'Satisfacción' },

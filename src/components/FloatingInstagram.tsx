@@ -47,8 +47,8 @@ export default function FloatingInstagram() {
             onHoverEnd={() => setIsHovered(false)}
             onFocus={() => setIsHovered(true)}
             onBlur={() => setIsHovered(false)}
-            className="relative flex items-center justify-center p-[14px] sm:p-4 rounded-full bg-[#111]/80 backdrop-blur-md border border-white/10 shadow-[0_4_20px_rgba(0,0,0,0.5)] overflow-hidden group transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
+            className="relative flex items-center justify-center p-[20px] sm:p-4 rounded-full bg-[#111]/80 backdrop-blur-md border border-white/10 shadow-[0_4_20px_rgba(0,0,0,0.5)] overflow-hidden group transition-all duration-300"
+            whileHover={{ scale: 1.09 }}
             whileTap={{ scale: 0.95 }}
           >
             {/* Instagram Gradient Background on Hover */}
@@ -62,7 +62,7 @@ export default function FloatingInstagram() {
             <div className="relative z-10 flex items-center justify-center text-white shrink-0">
               {/* Default Gradient Icon */}
               <motion.svg 
-                width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
+                width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
                 className="transition-all duration-300"
                 animate={{ opacity: isHovered ? 0 : 1 }}
                 style={{ position: isHovered ? 'absolute' : 'relative' }}

@@ -14,7 +14,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260213_202412.jpg',
     alt: 'Evento real NB Gaming',
-    label: 'Fifa Zone',
+    label: 'ZONE FC',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-2',
   },
@@ -186,7 +186,7 @@ export default function GallerySection() {
               )}
 
               {/* Label */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y--6 group-hover:translate-y-0 transition-transform duration-500">
                 <div className="flex items-center gap-2 mb-2 opacity-70 group-hover:opacity-100 transition-opacity">
                   <div className="w-2 h-2 rounded-full bg-nb-green-primary animate-pulse" />
                   <span className="text-[10px] font-[var(--font-heading)] text-nb-green-primary tracking-[0.2em] uppercase">

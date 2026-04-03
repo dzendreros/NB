@@ -261,8 +261,8 @@ export const FOOTER_SERVICES = [
 
 export const FOOTER_SOCIALS = [
   { name: "Instagram", href: "https://www.instagram.com/eventossocialesnb?igsh=czFnaTc2aXZ0cjd6", icon: "instagram" },
-  { name: "Facebook", href: "#", icon: "facebook" },
-  { name: "TikTok", href: "#", icon: "tiktok" },
+  { name: "Facebook", href: "https://www.facebook.com/share/18K4mRRNUk/", icon: "facebook" },
+  { name: "TikTok", href: "https://www.tiktok.com/@eventosnb?_r=1&_t=ZS-95Ehasnmv7i", icon: "tiktok" },
 ];
 
 export const FOOTER_TAGLINE = "Transformamos eventos en experiencias épicas.";
