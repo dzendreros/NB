@@ -112,7 +112,7 @@ export default function PricingSection() {
               className={`pricing-card relative flex flex-col rounded-2xl overflow-hidden ${
                 pkg.highlight
                   ? 'pricing-card--highlight'
-                  : 'glass-card'
+                  : 'glass-card shadow-[0_0_0_1px_rgba(255,255,255,0.08)]'
               }`}
             >
               {/* Highlight glow ring */}
