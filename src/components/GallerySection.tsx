@@ -21,7 +21,7 @@ const galleryImages = [
   {
     src: '/NB/images/IMG_20260213_203120.jpg',
     alt: 'Zona gamer en evento',
-    label: 'Racing + Fifa',
+    label: 'Racing + FC',
     isReal: true,
     spanClass: 'col-span-1 row-span-1',
   },
