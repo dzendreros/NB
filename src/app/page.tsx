@@ -25,6 +25,10 @@ export default function Home() {
         {/* 1. Hero */}
         <HeroSection />
 
+
+        {/* 5. Pricing packages (id="paquetes") */}
+        <PricingSection />
+
         {/* 2. Feature strip — 4 icons */}
         <FeatureStrip />
 
@@ -33,8 +37,6 @@ export default function Home() {
 
         <div className="section-divider" />
 
-        {/* 5. Pricing packages (id="paquetes") */}
-        <PricingSection />
 
         <div className="section-divider" />
 

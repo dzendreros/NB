@@ -244,7 +244,10 @@ export const CLIENT_LOGOS = [
   "TV AZTECA",
   "JW MARRIOTT",
   "SNTE",
-  "AMAZON",
+  "TELEVISA",
+  "PEPSICO",
+  "HUAWEI",
+  "SABORES POLANCO 2026"
 ];
 
 // ─── FOOTER ───────────────────────────────────────────────────────────────────
@@ -257,7 +260,7 @@ export const FOOTER_SERVICES = [
 ];
 
 export const FOOTER_SOCIALS = [
-  { name: "Instagram", href: "#", icon: "instagram" },
+  { name: "Instagram", href: "https://www.instagram.com/eventossocialesnb?igsh=czFnaTc2aXZ0cjd6", icon: "instagram" },
   { name: "Facebook", href: "#", icon: "facebook" },
   { name: "TikTok", href: "#", icon: "tiktok" },
 ];

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Orbitron, Inter } from 'next/font/google'
 import './globals.css'
+import FloatingInstagram from '@/components/FloatingInstagram'
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -59,6 +60,7 @@ export default function RootLayout({
     <html lang="es" className={`${orbitron.variable} ${inter.variable}`}>
       <body className="bg-nb-dark text-nb-text antialiased">
         {children}
+        <FloatingInstagram />
       </body>
     </html>
   )
