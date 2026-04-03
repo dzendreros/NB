@@ -145,14 +145,14 @@ export default function HeroSection() {
     >
       {/* Background Image */}
       <div ref={imageRef} className="absolute inset-0 w-full h-full scale-110">
-        <Image
+        {/* <Image
           src="/NB/images/file_00000000c23071fd9abf93b6763c31e1.png"
           alt="NB Gaming Experience - Zona Gamer para Eventos"
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
-        />
+        /> */}
       </div>
 
       {/* Multi-layer Overlays */}
