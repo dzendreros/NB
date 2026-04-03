@@ -47,7 +47,7 @@ export default function Navbar() {
             <motion.a
               href="#hero"
               whileHover={{ scale: 1.05, filter: 'drop-shadow(0 0 10px rgba(4,191,51,0.5))' }}
-              className="relative w-32 sm:w-40 h-12 cursor-pointer transition-all duration-300"
+              className="relative w-64 sm:w-80 h-24 sm:h-32 cursor-pointer transition-all duration-300"
             >
               <Image
                 src="/NB/images/logo2.png"
