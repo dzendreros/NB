@@ -130,7 +130,7 @@ export const PACKAGES = [
     id: "basica",
     name: "EXPERIENCIA BÁSICA",
     badge: null,
-    highlight: false,
+    highlight: true,
     image: "/NB/images/futbolito.jpg",
     features: [
       "3 Juegos a elegir",
@@ -145,7 +145,7 @@ export const PACKAGES = [
     id: "intermedia",
     name: "EXPERIENCIA INTERMEDIA",
     badge: null,
-    highlight: false,
+    highlight: true,
     image: "/NB/images/IMG_20260213_203702.jpg",
     features: [
       "4 Juegos a elegir",
