@@ -139,7 +139,7 @@ export const PACKAGES = [
     ],
     cta: "COTIZAR BÁSICO EN WHATSAPP",
     ctaLink:
-      "https://wa.me/5215528500983?text=Quiero%20informes%20sobre%20la%20EXPERIENCIA%20B%C3%81SICA%20de%20NB%20GAMING",
+      "https://wa.me/5215528500983?text=Hola,%20me%20interesa%20la%20Experiencia%20B%C3%A1sica%20de%20NB%20Gaming.%20%C2%BFPodr%C3%ADan%20compartirme%20informaci%C3%B3n%20sobre%20qu%C3%A9%20incluye,%20precios%20y%20disponibilidad%3F",
   },
   {
     id: "intermedia",
@@ -154,7 +154,7 @@ export const PACKAGES = [
     ],
     cta: "COTIZAR INTERMEDIO EN WHATSAPP",
     ctaLink:
-      "https://wa.me/5215528500983?text=Quiero%20informes%20sobre%20la%20EXPERIENCIA%20INTERMEDIA%20de%20NB%20GAMING",
+      "https://wa.me/5215528500983?text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20Experiencia%20Intermedia%20de%20NB%20Gaming.%20%C2%BFQu%C3%A9%20incluye%20y%20cu%C3%A1les%20son%20los%20costos%20y%20fechas%20disponibles%3F",
   },
   {
     id: "pro",
@@ -174,7 +174,7 @@ export const PACKAGES = [
     ],
     cta: "COTIZAR ZONA PRO EN WHATSAPP",
     ctaLink:
-      "https://wa.me/5215528500983?text=Quiero%20informes%20sobre%20la%20ZONA%20GAMER%20PRO%20de%20NB%20GAMING",
+      "https://wa.me/5215528500983?text=Hola,%20estoy%20interesado%20en%20la%20Zona%20Gamer%20Pro%20de%20NB%20Gaming.%20Me%20gustar%C3%ADa%20recibir%20detalles%20completos%20sobre%20la%20experiencia,%20beneficios,%20precios%20y%20disponibilidad.",
   },
 ];
 
