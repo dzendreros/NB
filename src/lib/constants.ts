@@ -1,4 +1,4 @@
-export const WHATSAPP_LINK = "https://wa.me/5215528500983";
+export const WHATSAPP_LINK = "https://wa.me/5215528500983?text=Hola,%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20la%20Zona%20Gamer.%20%C2%BFPodr%C3%ADan%20compartirme%20detalles%20de%20los%20paquetes%20y%20disponibilidad%3F";
 
 export const NAV_ITEMS = [
   { label: "El Arsenal", href: "#experiencia" },
