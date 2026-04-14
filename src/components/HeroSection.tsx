@@ -141,7 +141,7 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative w-full min-h-screen flex items-center overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div ref={imageRef} className="absolute inset-0 w-full h-full scale-110">

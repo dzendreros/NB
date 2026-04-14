@@ -145,7 +145,7 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <div className="p-7 sm:p-8 flex flex-col flex-1">
+              <div className="p-7 sm:p-8 flex flex-col flex-1 items-center text-center">
                 {/* Package name */}
                 <div className="mb-6">
                   <h3 className={`font-[var(--font-heading)] text-lg sm:text-xl font-black tracking-wide mb-2 ${
@@ -153,13 +153,13 @@ export default function PricingSection() {
                   }`}>
                     {pkg.name}
                   </h3>
-                  <div className="w-10 h-[2px] bg-gradient-to-r from-nb-green-primary to-transparent" />
+                  <div className="w-10 h-[2px] bg-gradient-to-r from-transparent via-nb-green-primary to-transparent mx-auto" />
                 </div>
 
                 {/* Features list */}
-                <ul className="space-y-3 flex-2 mb-8 pl-3">
+                <ul className="space-y-3 flex-2 mb-8 flex flex-col items-center">
                   {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-1.5">
+                    <li key={i} className="flex items-center justify-center gap-2 max-w-[220px] mx-auto text-center">
                       <CheckIcon />
                       <span className="text-sm text-nb-text/85 leading-snug">{feature}</span>
                     </li>

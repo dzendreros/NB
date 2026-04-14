@@ -58,12 +58,12 @@ export default function FeatureStrip() {
                 key={item.label}
                 whileHover={{ scale: 1.03, y: -3 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="feature-strip-item group flex flex-col sm:flex-row items-center gap-3 px-4 py-4 rounded-xl cursor-default"
+                className="feature-strip-item group flex flex-col items-center justify-center text-center gap-3 px-4 py-4 rounded-xl cursor-default"
               >
                 <span className="text-2xl sm:text-3xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   {item.icon}
                 </span>
-                <span className="text-center sm:text-left text-xs sm:text-sm font-semibold text-nb-text/90 group-hover:text-white transition-colors duration-300 leading-tight">
+                <span className="text-center text-xs sm:text-sm font-semibold text-nb-text/90 group-hover:text-white transition-colors duration-300 leading-tight">
                   {item.label}
                 </span>
                 {/* Glow dot indicator */}
