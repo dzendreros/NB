@@ -214,13 +214,13 @@ export default function HeroSection() {
 
       {/* ═══════ CONTENT ═══════ */}
       {/* Top offset: 40px urgency banner + 80px navbar = 120px */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[140px] sm:pt-[160px] pb-16">
-        <div className="max-w-3xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-[140px] sm:pt-[160px] pb-16">
+        <div className="max-w-3xl mx-auto text-center">
 
           {/* Badge — "ZONA GAMER PREMIUM" */}
           <div
             ref={badgeRef}
-            className="inline-flex w-fit max-w-full items-center gap-1.5 px-2.5 py-1 rounded-full mb-3 border border-nb-green-primary/30 bg-nb-green-primary/5 backdrop-blur-md mx-auto sm:mx-0"
+            className="inline-flex w-fit max-w-full items-center gap-1.5 px-2.5 py-1 rounded-full mb-3 border border-nb-green-primary/30 bg-nb-green-primary/5 backdrop-blur-md mx-auto"
             style={{ animation: 'glow-border 3s ease-in-out infinite' }}
           >
             <div className="w-1.5 h-1.5 rounded-full bg-nb-green-primary animate-pulse shrink-0" />
@@ -262,7 +262,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 mb-14">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 mb-14 justify-center items-center">
             {/* Primary — WhatsApp */}
             <motion.a
               href={HERO_CONTENT.primaryCtaLink}
@@ -296,7 +296,7 @@ export default function HeroSection() {
           </div>
 
           {/* Mini stats row */}
-          <div ref={statsRef} className="flex items-center gap-6 sm:gap-10">
+          <div ref={statsRef} className="flex items-center justify-center gap-6 sm:gap-10">
             {heroStats.map((stat, idx) => (
               <div key={stat.label} className="flex items-center gap-3">
                 {idx > 0 && (
