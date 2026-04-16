@@ -27,6 +27,7 @@ c:\Users\User2\Documents\Proyectos\NB\
 │   │   ├── EventTypesSection.tsx
 │   │   ├── CredibilitySection.tsx
 │   │   ├── SocialProofSection.tsx
+│   │   ├── PricingSection.tsx
 │   │   └── CTASection.tsx
 │   ├── hooks/
 │   │   └── useAnimations.ts # Custom Hooks de GSAP
@@ -62,7 +63,11 @@ Cada componente cumple un rol psicológico específico dentro del "Customer Jour
    - **Objetivo:** Romper la barrera del escepticismo empresarial. 
    - Argumento numérico: "+50,000 personas lo han vivido".
 
-6. **CTA de Cierre (`CTASection.tsx`):**
+6. **Transparencia de Precios (`PricingSection.tsx`):**
+   - **Objetivo:** Filtrar prospectos y clarificar valor.
+   - Presenta los 3 paquetes principales, apalancando opciones intermedias y destacando la opción de compra de alto valor ("Más Contratado"). Textos alineados para máxima legibilidad de beneficios.
+
+7. **CTA de Cierre (`CTASection.tsx`):**
    - **Objetivo:** Conversión final.
    - Táctica de Escasez: "Agenda limitada", "Asegura tu fecha antes de que se agote". 
 
@@ -75,6 +80,7 @@ El diseño respeta la paleta base, pero inyecta agresividad visual para denotar 
 - **Glassmorphism:** Tarjetas transparentes (`.glass-card`) que permiten ver las texturas y fondos (grid).
 - **Animaciones GSAP:** ScrollParallax, entradas Reveal (Texto que emerge desde abajo), Staggering (elementos que entran en cascada secuencial) en componentes como `GallerySection` y `EventTypesSection`.
 - **Framer Motion Microinteracciones:** Se usaron en los CTAs para rebotes tipo "elástico", dándole esa sensación táctil y responsiva propia de un videojuego.
+- **Contenedores Max-Width:** Todas las secciones están controladas por un wrapper `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` para mantener alineación perfecta y fluidez responsive. *(Ojo: se debió remover el reseteo manual de márgenes en `globals.css` para respetar la especificidad basada en @layers de Tailwind v4).*
 
 ---
 

@@ -55,7 +55,8 @@ nb-gaming/
 │   │   ├── GallerySection.tsx     # Bento Grid asimétrico para catálogo de simuladores
 │   │   ├── EventTypesSection.tsx  # Aplicación de servicio
 │   │   ├── CredibilitySection.tsx & SocialProofSection.tsx # Prueba Social y Autoridad
-│   │   └── CTASection.tsx   # Conversión de cierre y urgencia
+│   │   ├── PricingSection.tsx     # Display de paquetes, precios y beneficios
+│   │   └── CTASection.tsx         # Conversión de cierre y urgencia
 │   ├── hooks/
 │   │   └── useAnimations.ts # Hooks centralizados de la lógica compleja de GSAP
 │   └── lib/
@@ -115,6 +116,13 @@ Inicia el entorno de desarrollo con *Fast Refresh* en [http://localhost:3000](ht
 | `npm run build` | Compilación Prod | Compila la aplicación basculando configuraciones de `next.config.ts`. Genera la exportación estática en `out/` debido a `output: 'export'`. |
 | `npm run lint` | Análisis Estático | Ejecuta ESLint sobre todo el código fuente en la carpeta `/src/`. |
 | `npm run deploy` | Despliegue Directo | Construye, crea un archivo `.nojekyll`, y pushea la carpeta exportada estáticamente hacia la rama `gh-pages` usando `gh-pages` CLI. |
+
+---
+
+## ⚠️ Notas de Desarrollo Críticas (Tailwind v4)
+
+Dado que utilizamos **Tailwind CSS v4**, las clases utilitarias (`mx-auto`, `px-4`, etc.) se generan dentro de `@layer` en CSS. 
+**Regla de oro:** JAMÁS utilices un reset universal no-capado en `src/app/globals.css` como `* { margin: 0; padding: 0; }`. Las reglas sin capa (unlayered) anulan el sistema de capas de Tailwind, rompiendo el centrado y los espaciados en toda la landing page. Tailwind v4 ya incluye su propio Preflight optimizado que no rompe las utilidades.
 
 ---
 

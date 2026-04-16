@@ -2,6 +2,8 @@
 
 ¡Hola! En este documento encontrarás la locación exacta de cada bloque de código para que te sea muy sencillo editar el contenido (precios, paquetes, textos, links) y los comandos que necesitas ejecutar para que esos cambios se vean reflejados en tu página pública hospedada en GitHub Pages.
 
+> **⚠️ Nota Técnica (Sobre el Diseño):** Si además de textos deseas alterar espaciados o diseño, **hazlo siempre con clases de Tailwind (`mx-auto`, `px-4`)** en el archivo del componente. Esta versión Tailwind CSS v4 emplea un sistema de CSS `@layers`. Hacer un *CSS Reset* genérico modificando `src/app/globals.css` con estilos sin capa anulará el maquetado de toda la página y la desalineará.
+
 ---
 
 ## 1. ¿Dónde se encuentra cada cosa? (Mapa de Contenido)
