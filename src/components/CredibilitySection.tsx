@@ -120,7 +120,7 @@ export default function CredibilitySection() {
       <div className="absolute inset-0 grid-bg opacity-15" />
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-nb-green-primary/5 blur-[180px] -translate-y-1/2" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="section-label mx-auto w-fit glow-green">

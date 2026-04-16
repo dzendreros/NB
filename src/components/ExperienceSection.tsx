@@ -71,7 +71,7 @@ export default function ExperienceSection() {
       <div className="absolute inset-0 grid-bg opacity-20" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-nb-green-primary/5 blur-[150px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="section-label mx-auto w-fit glow-green">

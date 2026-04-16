@@ -83,7 +83,7 @@ export default function PricingSection() {
       <div className="absolute inset-0 grid-bg opacity-15" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-nb-green-primary/4 blur-[200px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="section-label mx-auto w-fit glow-green">
@@ -157,11 +157,11 @@ export default function PricingSection() {
                 </div>
 
                 {/* Features list */}
-                <ul className="space-y-3 flex-2 mb-8 flex flex-col items-center">
+                <ul className="space-y-3 flex-1 mb-8 flex flex-col w-full px-2 sm:px-4 text-left">
                   {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-center justify-center gap-2 max-w-[220px] mx-auto text-center">
-                      <CheckIcon />
-                      <span className="text-sm text-nb-text/85 leading-snug">{feature}</span>
+                    <li key={i} className="flex items-start gap-3 w-full">
+                      <div className="mt-0.5 flex-shrink-0"><CheckIcon /></div>
+                      <span className="text-sm text-nb-text/85 leading-relaxed">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -139,7 +139,7 @@ export default function GallerySection() {
       {/* Background */}
       <div className="absolute inset-0 grid-bg opacity-10" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16">
           <div className="section-label mx-auto w-fit glow-green-intense bg-nb-green-primary/10">

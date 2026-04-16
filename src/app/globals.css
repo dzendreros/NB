@@ -27,11 +27,10 @@
 /* ═══════════════════════════════════════════════════════════
    BASE STYLES
    ═══════════════════════════════════════════════════════════ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* NOTE: Tailwind v4's @import 'tailwindcss' already includes
+   Preflight reset (box-sizing, margin, padding) within CSS layers.
+   A manual * { margin:0 } here is UNLAYERED and would override
+   all Tailwind margin/padding utilities (mx-auto, px-4, etc.). */
 
 html {
   scroll-behavior: smooth;

@@ -127,7 +127,7 @@ export default function SocialProofSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-nb-dark via-nb-surface/20 to-nb-dark" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-nb-green-primary/3 blur-[200px] rounded-full" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={titleRef} className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="section-label mx-auto w-fit glow-green">

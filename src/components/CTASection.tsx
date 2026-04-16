@@ -78,7 +78,7 @@ export default function CTASection() {
       {/* Glowing orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-nb-green-primary/8 rounded-full blur-[200px]" />
 
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={contentRef}
           className="text-center glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-12 md:p-16 border-nb-green-primary/20 relative overflow-hidden"
