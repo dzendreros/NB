@@ -12,63 +12,63 @@ if (typeof window !== 'undefined') {
 
 const galleryImages = [
   {
-    src: '/NB/images/IMG_20260213_202412.jpg',
+    src: '/images/IMG_20260213_202412.jpg',
     alt: 'Evento real NB Gaming',
     label: 'ZONE FC',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-2',
   },
   {
-    src: '/NB/images/IMG_20260213_203120.jpg',
+    src: '/images/IMG_20260213_203120.jpg',
     alt: 'Zona gamer en evento',
     label: 'Racing + FC',
     isReal: true,
     spanClass: 'col-span-1 row-span-1',
   },
   {
-    src: '/NB/images/simulador vr.jpg',
+    src: '/images/simulador vr.jpg',
     alt: 'Simulador de Realidad Virtual',
     label: 'Realidad Virtual (VR)',
     isReal: false,
     spanClass: 'col-span-1 row-span-1',
   },
   {
-    src: '/NB/images/IMG_20260213_203702.jpg',
+    src: '/images/IMG_20260213_203702.jpg',
     alt: 'Evento gaming premium',
     label: 'VR + Racing + Futbolito',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-1',
   },
   {
-    src: '/NB/images/simulador carro2.jpg',
+    src: '/images/simulador carro2.jpg',
     alt: 'Simulador de Carreras',
     label: 'F1 Racing Sim',
     isReal: false,
     spanClass: 'col-span-1 row-span-1',
   },
   {
-    src: '/NB/images/arcade.jpg',
+    src: '/images/arcade.jpg',
     alt: 'Máquinas Arcade',
     label: 'Arcade Zone',
     isReal: false,
     spanClass: 'col-span-1 row-span-1',
   },
   {
-    src: '/NB/images/IMG_20260130_145222.jpg',
+    src: '/images/IMG_20260130_145222.jpg',
     alt: 'Zona gamer exterior evento',
     label: 'VR Boxing',
     isReal: true,
     spanClass: 'sm:col-span-2 sm:row-span-1',
   },
   {
-    src: '/NB/images/futbolito2.jpg',
+    src: '/images/futbolito2.jpg',
     alt: 'Mesa de Futbolito',
     label: 'Torneo de Futbolito',
     isReal: false,
     spanClass: 'col-span-1 row-span-1',
   },
   {
-    src: '/NB/images/simulador de box.jpg',
+    src: '/images/simulador de box.jpg',
     alt: 'Simulador de Box',
     label: 'Fight Zone VR',
     isReal: false,
@@ -105,7 +105,7 @@ export default function GallerySection() {
       // Gallery items stagger
       if (galleryRef.current) {
         const items = galleryRef.current.querySelectorAll('.bento-item')
-        items.forEach((item, i) => {
+        items.forEach((item) => {
           gsap.fromTo(
             item,
             { y: 80, opacity: 0, scale: 0.9, rotateX: 10 },

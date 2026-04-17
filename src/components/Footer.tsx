@@ -82,7 +82,7 @@ export default function Footer() {
             className="relative w-52 sm:w-64 h-16 sm:h-20"
           >
             <Image
-              src="/NB/images/logo2.png"
+              src="/images/logo2.png"
               alt="NB Gaming Experience"
               fill
               className="object-contain"
@@ -202,8 +202,8 @@ export default function Footer() {
             <span className="text-[10px] text-nb-text-muted tracking-wider uppercase">Una marca de</span>
             <div className="relative w-20 h-7">
               <Image
-                src="/NB/images/logo.png"
-                alt="Eventos NB"
+                src="/images/logo.png"
+                alt="Logo Empresa"
                 fill
                 className="object-contain filter grayscale"
               />

@@ -159,7 +159,7 @@ export default function CredibilitySection() {
           <div className="relative rounded-2xl overflow-hidden h-[350px] sm:h-[450px] order-2 lg:order-1">
             <div ref={imageRef} className="absolute inset-[-15%] w-[130%] h-[130%]">
               <Image
-                src="/NB/images/file_00000000dfb471f785005742663672df.png"
+                src="/images/file_00000000dfb471f785005742663672df.png"
                 alt="Experiencia VR en eventos NB Gaming"
                 fill
                 className="object-cover"
@@ -185,7 +185,7 @@ export default function CredibilitySection() {
 
           {/* Trust Points */}
           <div ref={cardsRef} className="order-1 lg:order-2 space-y-4">
-            {TRUST_POINTS.map((point, idx) => (
+            {TRUST_POINTS.map((point) => (
               <motion.div
                 key={point.title}
                 whileHover={{ x: 8, transition: { duration: 0.3 } }}

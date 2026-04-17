@@ -50,7 +50,7 @@ export default function Navbar() {
               className="relative w-64 sm:w-80 h-24 sm:h-32 cursor-pointer transition-all duration-300"
             >
               <Image
-                src="/NB/images/logo2.png"
+                src="/images/logo2.png"
                 alt="NB Gaming Experience Logo"
                 fill
                 className="object-contain"

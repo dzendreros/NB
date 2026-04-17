@@ -4,8 +4,7 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Image from 'next/image'
-import { WHATSAPP_LINK, HERO_CONTENT } from '@/lib/constants'
+import { HERO_CONTENT } from '@/lib/constants'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -258,7 +257,7 @@ export default function HeroSection() {
             ref={taglineRef}
             className="text-base sm:text-lg md:text-xl text-[#F0F0F0]/85 leading-relaxed font-medium italic mb-10"
           >
-            "{HERO_CONTENT.tagline}"
+            &quot;{HERO_CONTENT.tagline}&quot;
           </p>
 
           {/* CTA Buttons */}

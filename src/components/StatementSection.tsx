@@ -4,12 +4,9 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
-
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
-
-const STATEMENT_TEXT = 'Creamos una zona gamer completa que se convierte en el centro de atención'
 
 export default function StatementSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -85,8 +82,8 @@ export default function StatementSection() {
       {/* Background image with parallax */}
       <div ref={bgRef} className="absolute inset-[-20%] w-[140%] h-[140%]">
         <Image
-          src="/NB/images/IMG_20260213_202412.jpg"
-          alt="Zona Gamer NB Gaming en evento real"
+          src="/images/IMG_20260213_202412.jpg"
+          alt="Gaming Experience Setup"
           fill
           className="object-cover object-center"
           sizes="100vw"

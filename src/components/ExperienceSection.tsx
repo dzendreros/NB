@@ -91,7 +91,7 @@ export default function ExperienceSection() {
           ref={cardsRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6"
         >
-          {EVENT_CATEGORIES.map((category, idx) => (
+          {EVENT_CATEGORIES.map((category) => (
             <motion.div
               key={category.title}
               whileHover={{
